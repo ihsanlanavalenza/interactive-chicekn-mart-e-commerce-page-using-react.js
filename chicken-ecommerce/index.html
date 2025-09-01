@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChickenMart - Jual Beli Ayam Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-top">
+                <div class="logo">
+                    <i class="fas fa-drumstick-bite"></i>
+                    <span>Chicken Soni Afriandi</span>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Cari ayam segar, ayam potong, dll...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="nav-actions">
+                    <div class="cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                    <div class="user-menu">
+                        <i class="fas fa-user"></i>
+                        <span>Akun</span>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#categories">Kategori</a></li>
+                    <li><a href="#products">Produk</a></li>
+                    <li><a href="#promo">Promo</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section id="home" class="hero">
+        <div class="hero-slider">
+            <div class="slide active">
+                <img src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=1200&h=400&fit=crop" alt="Ayam Segar">
+                <div class="slide-content">
+                    <h2>Ayam Segar Langsung dari Peternak</h2>
+                    <p>Kualitas terbaik dengan harga terjangkau</p>
+                    <button class="btn-primary">Belanja Sekarang</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section id="categories" class="categories">
+        <div class="container">
+            <h2 class="section-title">Kategori Produk</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-drumstick-bite"></i>
+                    </div>
+                    <h3>Ayam Potong</h3>
+                    <p>Fresh & Halal</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-egg"></i>
+                    </div>
+                    <h3>Ayam Utuh</h3>
+                    <p>Siap Masak</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Ayam Bakar</h3>
+                    <p>Siap Santap</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <h3>Ayam Frozen</h3>
+                    <p>Tahan Lama</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flash Sale -->
+    <section class="flash-sale">
+        <div class="container">
+            <div class="flash-header">
+                <h2><i class="fas fa-bolt"></i> FLASH SALE</h2>
+                <div class="countdown">
+                    <span>Berakhir dalam:</span>
+                    <div class="timer">
+                        <span id="hours">05</span>:
+                        <span id="minutes">23</span>:
+                        <span id="seconds">45</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flash-products">
+                <div class="product-card flash">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=300&h=300&fit=crop" alt="Ayam Kampung">
+                        <div class="discount-badge">-30%</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Ayam Kampung Segar</h3>
+                        <div class="price">
+                            <span class="current-price">Rp 35.000</span>
+                            <span class="original-price">Rp 50.000</span>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.8 (120)</span>
+                        </div>
+                        <div class="sold">Terjual 89</div>
+                    </div>
+                </div>
+                <div class="product-card flash">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=300&h=300&fit=crop" alt="Ayam Broiler">
+                        <div class="discount-badge">-25%</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Ayam Broiler Fresh</h3>
+                        <div class="price">
+                            <span class="current-price">Rp 22.500</span>
+                            <span class="original-price">Rp 30.000</span>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.7 (95)</span>
+                        </div>
+                        <div class="sold">Terjual 156</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="products-header">
+                <h2 class="section-title">Produk Pilihan</h2>
+                <div class="filter-tabs">
+                    <button class="tab-btn active" data-filter="all">Semua</button>
+                    <button class="tab-btn" data-filter="fresh">Segar</button>
+                    <button class="tab-btn" data-filter="frozen">Frozen</button>
+                    <button class="tab-btn" data-filter="processed">Olahan</button>
+                </div>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-category="fresh">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=300&h=300&fit=crop" alt="Ayam Kampung">
+                        <div class="product-actions">
+                            <button class="btn-wishlist"><i class="fas fa-heart"></i></button>
+                            <button class="btn-compare"><i class="fas fa-exchange-alt"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Ayam Kampung Organik</h3>
+                        <div class="price">
+                            <span class="current-price">Rp 45.000</span>
+                        </div>
+                        <div class="rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span>4.9 (234)</span>
+                        </div>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Jakarta Selatan</span>
+                        </div>
+                        <button class="btn-add-cart">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-category="fresh">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=300&h=300&fit=crop" alt="Ayam Broiler">
+                    </div>
+                    <div class="product-info">
+                        <h3>Ayam Broiler Segar</h3>
+                        <div class="price">
+                            <span class="current-price">Rp 28.000</span>
+                        </div>
+                        <div class="rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span>4.5 (189)</span>
+                        </div>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Bogor</span>
+                        </div>
+                        <button class="btn-add-cart">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-category="processed">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=300&h=300&fit=crop" alt="Ayam Goreng">
+                    </div>
+                    <div class="product-info">
+                        <h3>Ayam Goreng Krispy</h3>
+                        <div class="price">
+                            <span class="current-price">Rp 35.000</span>
+                        </div>
+                        <div class="rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span>4.8 (167)</span>
+                        </div>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Bandung</span>
+                        </div>
+                        <button class="btn-add-cart">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card" data-category="frozen">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1567620832903-9fc6debc209f?w=300&h=300&fit=crop" alt="Ayam Frozen">
+                    </div>
+                    <div class="product-info">
+                        <h3>Ayam Frozen Premium</h3>
+                        <div class="price">
+                            <span class="current-price">Rp 25.000</span>
+                        </div>
+                        <div class="rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span>4.2 (78)</span>
+                        </div>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Surabaya</span>
+                        </div>
+                        <button class="btn-add-cart">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card" data-category="fresh">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1587593810167-a84920ea0781?w=300&h=300&fit=crop" alt="Ayam Pejantan">
+                    </div>
+                    <div class="product-info">
+                        <h3>Ayam Pejantan Kampung</h3>
+                        <div class="price">
+                            <span class="current-price">Rp 55.000</span>
+                        </div>
+                        <div class="rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span>4.9 (145)</span>
+                        </div>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Yogyakarta</span>
+                        </div>
+                        <button class="btn-add-cart">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card" data-category="processed">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1562967914-608f82629710?w=300&h=300&fit=crop" alt="Ayam Bakar">
+                    </div>
+                    <div class="product-info">
+                        <h3>Ayam Bakar Bumbu Kecap</h3>
+                        <div class="price">
+                            <span class="current-price">Rp 40.000</span>
+                        </div>
+                        <div class="rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span>4.6 (203)</span>
+                        </div>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Semarang</span>
+                        </div>
+                        <button class="btn-add-cart">+ Keranjang</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promo Section -->
+    <section id="promo" class="promo-section">
+        <div class="container">
+            <h2 class="section-title">Promo Spesial</h2>
+            <div class="promo-banner">
+                <div class="promo-content">
+                    <h3>Gratis Ongkir untuk Pembelian di atas Rp 100.000</h3>
+                    <p>Berlaku untuk seluruh Indonesia. Syarat dan ketentuan berlaku.</p>
+                    <button class="btn-promo">Claim Sekarang</button>
+                </div>
+                <div class="promo-image">
+                    <i class="fas fa-truck"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analytics Dashboard -->
+    <section class="analytics-dashboard">
+        <div class="container">
+            <h2 class="section-title">Dashboard Penjualan</h2>
+            
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>1,234</h3>
+                        <p>Total Pesanan</p>
+                        <span class="stat-change positive">+12.5%</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Rp 45.6M</h3>
+                        <p>Total Penjualan</p>
+                        <span class="stat-change positive">+8.3%</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>2,567</h3>
+                        <p>Pelanggan Aktif</p>
+                        <span class="stat-change positive">+15.2%</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-drumstick-bite"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>8,901</h3>
+                        <p>Ayam Terjual</p>
+                        <span class="stat-change positive">+22.1%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="charts-section">
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3>Penjualan Bulanan</h3>
+                        <div class="chart-period">
+                            <button class="period-btn active">7 Hari</button>
+                            <button class="period-btn">30 Hari</button>
+                            <button class="period-btn">90 Hari</button>
+                        </div>
+                    </div>
+                    <div class="chart-content">
+                        <canvas id="salesChart" width="800" height="400"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3>Kategori Terlaris</h3>
+                    </div>
+                    <div class="chart-content">
+                        <div class="pie-chart-container">
+                            <canvas id="categoryChart" width="300" height="300"></canvas>
+                            <div class="chart-legend">
+                                <div class="legend-item">
+                                    <span class="legend-color" style="background: #FF6B6B;"></span>
+                                    <span>Ayam Potong (45%)</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="legend-color" style="background: #4ECDC4;"></span>
+                                    <span>Ayam Utuh (30%)</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="legend-color" style="background: #45B7D1;"></span>
+                                    <span>Ayam Bakar (15%)</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="legend-color" style="background: #96CEB4;"></span>
+                                    <span>Ayam Frozen (10%)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Performance Metrics -->
+            <div class="performance-metrics">
+                <div class="metric-card">
+                    <h4>Rating Toko</h4>
+                    <div class="rating-display">
+                        <div class="rating-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-number">4.9/5</span>
+                    </div>
+                    <div class="rating-breakdown">
+                        <div class="rating-bar">
+                            <span>5★</span>
+                            <div class="bar">
+                                <div class="fill" style="width: 85%;"></div>
+                            </div>
+                            <span>85%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>4★</span>
+                            <div class="bar">
+                                <div class="fill" style="width: 12%;"></div>
+                            </div>
+                            <span>12%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>3★</span>
+                            <div class="bar">
+                                <div class="fill" style="width: 2%;"></div>
+                            </div>
+                            <span>2%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>2★</span>
+                            <div class="bar">
+                                <div class="fill" style="width: 1%;"></div>
+                            </div>
+                            <span>1%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>1★</span>
+                            <div class="bar">
+                                <div class="fill" style="width: 0%;"></div>
+                            </div>
+                            <span>0%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <h4>Performa Toko</h4>
+                    <div class="performance-stats">
+                        <div class="perf-item">
+                            <span class="perf-label">Tingkat Respon</span>
+                            <div class="perf-bar">
+                                <div class="perf-fill" style="width: 95%;"></div>
+                            </div>
+                            <span class="perf-value">95%</span>
+                        </div>
+                        <div class="perf-item">
+                            <span class="perf-label">Ketepatan Waktu</span>
+                            <div class="perf-bar">
+                                <div class="perf-fill" style="width: 92%;"></div>
+                            </div>
+                            <span class="perf-value">92%</span>
+                        </div>
+                        <div class="perf-item">
+                            <span class="perf-label">Kualitas Produk</span>
+                            <div class="perf-bar">
+                                <div class="perf-fill" style="width: 98%;"></div>
+                            </div>
+                            <span class="perf-value">98%</span>
+                        </div>
+                        <div class="perf-item">
+                            <span class="perf-label">Kepuasan Pelanggan</span>
+                            <div class="perf-bar">
+                                <div class="perf-fill" style="width: 96%;"></div>
+                            </div>
+                            <span class="perf-value">96%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sales Trend -->
+            <div class="sales-trend">
+                <h3>Tren Penjualan 7 Hari Terakhir</h3>
+                <div class="trend-chart">
+                    <div class="trend-bar" data-value="85">
+                        <div class="bar-fill" style="height: 85%;"></div>
+                        <span class="bar-label">Sen</span>
+                        <span class="bar-value">85</span>
+                    </div>
+                    <div class="trend-bar" data-value="92">
+                        <div class="bar-fill" style="height: 92%;"></div>
+                        <span class="bar-label">Sel</span>
+                        <span class="bar-value">92</span>
+                    </div>
+                    <div class="trend-bar" data-value="78">
+                        <div class="bar-fill" style="height: 78%;"></div>
+                        <span class="bar-label">Rab</span>
+                        <span class="bar-value">78</span>
+                    </div>
+                    <div class="trend-bar" data-value="95">
+                        <div class="bar-fill" style="height: 95%;"></div>
+                        <span class="bar-label">Kam</span>
+                        <span class="bar-value">95</span>
+                    </div>
+                    <div class="trend-bar" data-value="100">
+                        <div class="bar-fill" style="height: 100%;"></div>
+                        <span class="bar-label">Jum</span>
+                        <span class="bar-value">100</span>
+                    </div>
+                    <div class="trend-bar" data-value="88">
+                        <div class="bar-fill" style="height: 88%;"></div>
+                        <span class="bar-label">Sab</span>
+                        <span class="bar-value">88</span>
+                    </div>
+                    <div class="trend-bar" data-value="75">
+                        <div class="bar-fill" style="height: 75%;"></div>
+                        <span class="bar-label">Min</span>
+                        <span class="bar-value">75</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ChickenMart</h3>
+                    <p>Platform jual beli ayam segar terpercaya di Indonesia. Kualitas terjamin, harga bersahabat.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="#">Cara Berbelanja</a></li>
+                        <li><a href="#">Metode Pembayaran</a></li>
+                        <li><a href="#">Pengiriman</a></li>
+                        <li><a href="#">Return & Refund</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Bantuan</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Hubungi Kami</a></li>
+                        <li><a href="#">Live Chat</a></li>
+                        <li><a href="#">Panduan</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +62 812-3456-7890</p>
+                        <p><i class="fas fa-envelope"></i> info@chickenmart.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ChickenMart. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Keranjang Belanja</h3>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="cartItems">
+                    <p class="empty-cart">Keranjang Anda kosong</p>
+                </div>
+                <div class="cart-total">
+                    <div class="total-price">
+                        <span>Total: Rp <span id="totalAmount">0</span></span>
+                    </div>
+                    <button class="btn-checkout">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

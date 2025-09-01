@@ -1,0 +1,172 @@
+.flash-sale {
+  background: #fff;
+  padding: 40px 0;
+  border-bottom: 8px solid #f5f5f5;
+}
+
+.flash-sale-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.flash-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.flash-title h2 {
+  color: #ff6b35;
+  font-size: 28px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.fire-icon {
+  color: #ff6b35;
+  font-size: 24px;
+  animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+  0% { opacity: 1; }
+  100% { opacity: 0.7; }
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #333;
+  font-weight: 500;
+}
+
+.time-blocks {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.time-block {
+  background: #ff6b35;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  min-width: 35px;
+  text-align: center;
+}
+
+.separator {
+  color: #ff6b35;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.flash-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.flash-product {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.flash-product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.product-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image .image-placeholder {
+  width: 100%;
+  height: 200px;
+  transition: transform 0.3s;
+}
+
+.flash-product:hover .product-image .image-placeholder {
+  transform: scale(1.05);
+}
+
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ff0000;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.product-info {
+  padding: 20px;
+}
+
+.product-info h3 {
+  margin: 0 0 15px 0;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.3;
+}
+
+.price-info {
+  margin-bottom: 15px;
+}
+
+.discount-price {
+  color: #ff6b35;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.original-price {
+  color: #999;
+  text-decoration: line-through;
+  font-size: 14px;
+}
+
+.progress-bar {
+  background: #f0f0f0;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progress-fill {
+  background: linear-gradient(90deg, #ff6b35, #f7931e);
+  height: 100%;
+  transition: width 0.3s;
+}
+
+.sold-info {
+  font-size: 12px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .flash-sale-header {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .flash-products {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
