@@ -9,7 +9,7 @@ import {
   Legend,
   ArcElement,
 } from 'chart.js';
-import { Bar, Doughnut } from '../../node_modules/react-chartjs-2/src';
+import { Bar, Doughnut } from 'react-chartjs-2';
 import { FaChartLine, FaUsers, FaShoppingCart, FaDollarSign } from 'react-icons/fa';
 import './Analytics.css';
 
